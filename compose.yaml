@@ -1,0 +1,15 @@
+﻿services:
+  postgres:
+    image: postgres:16
+    container_name: pg_dev
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: St4l1ngr4d-42
+      POSTGRES_DB: Havel
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
+

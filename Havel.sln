@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havel.WebApi", "Havel.WebApi\Havel.WebApi.csproj", "{31237C69-1368-435B-90A5-8499C42D9F6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havel.Domain", "Havel.Domain\Havel.Domain.csproj", "{489417D2-75DE-4B97-AA93-F40DA75B386D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havel.Application", "Havel.Application\Havel.Application.csproj", "{FC9124EF-1053-4173-B11D-FB0E53E8DF62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Havel.Infrastructure", "Havel.Infrastructure\Havel.Infrastructure.csproj", "{D2A37E36-6BF2-4BBF-89D1-72B534B88B34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{5099510C-70BA-4B25-A29C-D4F8FF407202}"
+	ProjectSection(SolutionItems) = preProject
+		compose.yaml = compose.yaml
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31237C69-1368-435B-90A5-8499C42D9F6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31237C69-1368-435B-90A5-8499C42D9F6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31237C69-1368-435B-90A5-8499C42D9F6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31237C69-1368-435B-90A5-8499C42D9F6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{489417D2-75DE-4B97-AA93-F40DA75B386D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{489417D2-75DE-4B97-AA93-F40DA75B386D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{489417D2-75DE-4B97-AA93-F40DA75B386D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{489417D2-75DE-4B97-AA93-F40DA75B386D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC9124EF-1053-4173-B11D-FB0E53E8DF62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC9124EF-1053-4173-B11D-FB0E53E8DF62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC9124EF-1053-4173-B11D-FB0E53E8DF62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC9124EF-1053-4173-B11D-FB0E53E8DF62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2A37E36-6BF2-4BBF-89D1-72B534B88B34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2A37E36-6BF2-4BBF-89D1-72B534B88B34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2A37E36-6BF2-4BBF-89D1-72B534B88B34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2A37E36-6BF2-4BBF-89D1-72B534B88B34}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
