@@ -12,6 +12,7 @@ public class HavelContext: DbContext
     
     public DbSet<UserEntity>  Users { get; set; }
     public DbSet<UserMedicalInformationEntity> UsersMedicalInformation { get; set; }
+    public DbSet<UserMedicationEntity> UsersMedications { get; set; }
     
     public HavelContext(DbContextOptions<HavelContext> options, IEncryptionService encryptionService)
         : base(options)
@@ -24,6 +25,7 @@ public class HavelContext: DbContext
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfiguration(new UserConfiguration());
         modelBuilder.ApplyConfiguration(new UserMedicalInformationConfiguration());
+        modelBuilder.ApplyConfiguration(new UserMedicationConfiguration());
         
         //Encryption Services
         modelBuilder.Entity<UserEntity>()

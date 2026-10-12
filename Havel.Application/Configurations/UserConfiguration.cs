@@ -33,5 +33,11 @@ public sealed class UserConfiguration: IEntityTypeConfiguration<UserEntity>
             .WithOne(u => u.User)
             .HasForeignKey<UserMedicalInformationEntity>(u => u.UserId)
             .OnDelete(DeleteBehavior.Cascade);
+        
+        builder
+            .HasMany(u => u.UserMedications)
+            .WithOne(u => u.User)
+            .HasForeignKey(u => u.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

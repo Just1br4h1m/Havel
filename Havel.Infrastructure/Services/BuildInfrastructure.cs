@@ -25,7 +25,11 @@ public static class BuildInfrastructure
         services.AddScoped<IAuthenticationService, AuthenticationService>();
         services.AddScoped<IEncryptionService, EncryptionService>();
         services.AddScoped<IHashingService, HashingService>();
+        services.AddScoped<IMedicationScheduleService, MedicationScheduleService>();
+        
+        
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<IUserMedicationRepository, UserMedicationRepository>();
         services.AddScoped<IUserMedicalInformationRepository, UserMedicalInformationRepository>();
         services.AddScoped<IUserService, UserService>();
 

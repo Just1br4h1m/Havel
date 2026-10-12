@@ -1,4 +1,5 @@
 using Havel.Application.Models;
+using Havel.Application.Models.Medication;
 using Havel.Application.Models.UserMedical;
 using Havel.Domain.Entities;
 
@@ -12,5 +13,8 @@ public class MappingProfile: AutoMapper.Profile
         CreateMap<UpdateUserDto, UserEntity>();
         CreateMap<UserMedicalInformationEntity, MedicalDto>().ReverseMap();
         CreateMap<UserMedicalInformationEntity, MedicalDetailsDto>();
+
+        CreateMap<UserMedicationEntity, CreateScheduleDto>().ReverseMap();
+        CreateMap<UserMedicationEntity, DetailsScheduleDto>();
     }
 }

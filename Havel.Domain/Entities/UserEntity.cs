@@ -23,5 +23,6 @@ public class UserEntity
     public DateTime? RefreshTokenExpires { get; set; }
 
     public UserMedicalInformationEntity? UserMedicalInformation { get; set; }
+    public ICollection<UserMedicationEntity>? UserMedications { get; set; }
 }
 
