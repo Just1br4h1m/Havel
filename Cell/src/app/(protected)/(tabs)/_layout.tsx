@@ -1,8 +1,8 @@
-import { Stack, Tabs } from "expo-router";
-import Ionicons from 'react-native-vector-icons/Ionicons';
+import { Tabs } from "expo-router";
+import { House, Settings, Tablets } from 'lucide-react-native';
 
 export default function TabsLayout() {
-    return(
+    return (
         <Tabs
             screenOptions={{
                 tabBarActiveTintColor: '#0B1C49',
@@ -16,24 +16,26 @@ export default function TabsLayout() {
                 name="index"
                 options={{
                     tabBarLabel: 'Home',
-                    tabBarIcon: ({ focused, color, size }) => (
-                        <Ionicons
-                            name={focused ? 'home' : 'home-outline'}
-                            size={size}
-                            color={color}
-                        />
+                    tabBarIcon: ({ color, size }) => (
+                        <House size={size} color={color} />
                     ),
                 }}
             />
             <Tabs.Screen
                 name="settings"
                 options={{
-                    tabBarIcon: ({ focused, color, size }) => (
-                        <Ionicons
-                            name={focused ? 'settings' : 'settings-outline'}
-                            size={size}
-                            color={color}
-                        />
+                    tabBarLabel: 'Settings',
+                    tabBarIcon: ({ color, size }) => (
+                        <Settings size={size} color={color} />
+                    ),
+                }}
+            />
+            <Tabs.Screen
+                name="medicationReminder"
+                options={{
+                    tabBarLabel: 'Medications',
+                    tabBarIcon: ({ color, size }) => (
+                        <Tablets size={size} color={color} />
                     ),
                 }}
             />
