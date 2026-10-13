@@ -10,7 +10,8 @@ export type MedicationTime = {
 }
 
 export type Medication = {
-    id: string;
+    id: string; // local id or server scheduleId when synced
+    scheduleId?: string | null; // server-side schedule id (GUID) when synced
     name: string;
     times: MedicationTime[];
     foodTiming: string;

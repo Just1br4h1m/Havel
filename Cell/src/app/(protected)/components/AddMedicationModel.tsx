@@ -63,7 +63,7 @@ export function AddMedicationModal({
 
     const quantityOptions =
         quantityType === 'Pills'
-            ? Array.from({ length: 20 }, (_, i) => i + 1)
+            ? [0.25, 0.5, 1, 2, 25, 50, 100, 500]
             : [50, 100, 150, 200, 250, 300, 350, 400, 450, 500];
 
     const handleOpenPicker = () => {
@@ -245,7 +245,7 @@ export function AddMedicationModal({
                                     activeOpacity={0.8}
                                 >
                                     <Text style={[styles.quantityChipText, quantity === item && styles.quantityChipTextActive]}>
-                                        {quantityType === 'Pills' ? `${item}` : `${item} ml`}
+                                        {quantityType === 'Pills' ? `${item} mg` : `${item} ml`}
                                     </Text>
                                 </TouchableOpacity>
                             )}

@@ -4,6 +4,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { MedicationWithStatus, DoseStatus } from '../../hooks/useMedicationForm';
 import { formatTime } from '../../utils/time';
 import { useTheme } from 'expo-router';
+import { Droplet, Tablets } from "lucide-react-native";
 
 interface MedicationCardProps {
     medication: MedicationWithStatus;
@@ -32,12 +33,8 @@ export function MedicationCard({ medication, onEdit, onDelete, onToggleStatus }:
         <View style={[styles.card, { backgroundColor: colors.surface || '#FFFFFF' }]}>
             <View style={styles.headerRow}>
                 <View style={styles.leftInfoGroup}>
-                    <View style={[styles.typeIconBadge, { backgroundColor: isSyrup ? '#EBF8FF' : '#F8F9FA' }]}>
-                        <Ionicons
-                            name={isSyrup ? "water" : "medical"}
-                            size={20}
-                            color={isSyrup ? "#1E88E5" : "#0B1C49"}
-                        />
+                    <View style={[styles.typeIconBadge, { backgroundColor: '#F8F9FA' }]}>
+                        { isSyrup ? <Droplet /> : <Tablets /> }
                     </View>
 
                     <View style={styles.titleContainer}>
@@ -46,7 +43,7 @@ export function MedicationCard({ medication, onEdit, onDelete, onToggleStatus }:
                         </Text>
                         <Text style={styles.cardDetails}>
                             {medication.quantity}
-                            {isSyrup ? ' ml' : ` ${medication.quantityType}`}
+                            {isSyrup ? ' ml' : ' mg '}
                             {' • '}
                             {medication.foodTiming}
                         </Text>
@@ -175,10 +172,12 @@ const styles = StyleSheet.create({
     },
     notesIcon: {
         marginRight: 6,
+        color: '#D00000',
     },
     cardNotes: {
         fontSize: 11,
-        color: '#6E737B',
+        fontWeight: '600',
+        color: '#D00000',
         flex: 1,
     },
     timesRow: {

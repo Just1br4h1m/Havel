@@ -22,20 +22,20 @@ export default function TabsLayout() {
                 }}
             />
             <Tabs.Screen
+                name="medications"
+                options={{
+                    tabBarLabel: 'Medications',
+                    tabBarIcon: ({ color, size }) => (
+                        <Tablets size={size} color={color} />
+                    ),
+                }}
+            />
+            <Tabs.Screen
                 name="settings"
                 options={{
                     tabBarLabel: 'Settings',
                     tabBarIcon: ({ color, size }) => (
                         <Settings size={size} color={color} />
-                    ),
-                }}
-            />
-            <Tabs.Screen
-                name="medicationReminder"
-                options={{
-                    tabBarLabel: 'Medications',
-                    tabBarIcon: ({ color, size }) => (
-                        <Tablets size={size} color={color} />
                     ),
                 }}
             />

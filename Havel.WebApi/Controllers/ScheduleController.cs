@@ -1,9 +1,11 @@
 using Havel.Application.Abstractions.Services;
 using Havel.Application.Models.Medication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Havel.WebApi.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ScheduleController: ControllerBase
